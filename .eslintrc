@@ -1,6 +1,10 @@
 {
-    "extends": ["react-app","plugin:prettier/recommanded"],
+    "extends": ["airbnb", "plugin:prettier/recommended", "prettier/react"],
     "rules": {
-        "no-console":"warn"
-    }
-}
+     "no-console":"warn",
+     "no-alert":"error",
+     "no-var": "error",
+     "no-unused-vars":"error"
+    },
+    "parser": "babel-eslint"
+  }
