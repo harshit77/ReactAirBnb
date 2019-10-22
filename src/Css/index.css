@@ -1,0 +1,67 @@
+.headerSearch {
+    width: 50%;
+    position: relative;
+    margin-left: 20%;
+    margin-right: 16px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+.flexGrow {
+    flex-grow: 1
+}
+.searchIcon {
+    width: 56px;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    right: 0;
+    top: 0;
+}
+.inputRoot {
+    color: "inherit !important";
+    width: "100% !important"
+}
+.selectionContainer {
+    width: 70%;
+    margin: 0 auto;
+}
+.inRow, .inRow .konvajs-content  {
+    margin: 0 auto;
+}
+.inRow .konvajs-content  {
+    margin-top: 20px;
+}
+.formControl {
+    border-width: 2px !important;
+    border-style: solid !important;
+}
+.stPadding {
+    padding: 20px !important;
+}
+.stContainerPadding {
+    padding: 0 20px 20px 20px!important;
+    display: flex;
+    justify-content: space-evenly;
+}
+.stMarginTop {
+    margin-top: 40px;
+}
+#root {
+    background: #F5F5F5;
+}
+.stBg {
+    background: #fff;
+}
+.separation {
+    border-right: 10px solid  #F5F5F5
+}
+.controlSection{    width: calc(100% - 80%);
+}
+.reticleSection{    width: calc(100% - 70%);
+}
+.shotMapSection{    width: calc(100% - 20%);
+
+}

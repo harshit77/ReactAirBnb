@@ -1,59 +1,38 @@
 /* eslint-disable react/destructuring-assignment */
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
-import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
+import Header from "./Components/Header";
+import ShotMapSectionHeader from "./Components/ShotMapSectionHeader";
+import ShotMapGridContainer from "./Components/ShotMapGridContainer";
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    flexGrow: 1,
-    background: "red"
+const checkBoxOption = [
+  {
+    checked: true,
+    checkBoxLabel: "Controls"
   },
-  menuButton: {
-    marginRight: theme.spacing(2)
+  {
+    checked: true,
+    checkBoxLabel: "Reticle"
   },
-  title: {
-    flexGrow: 1
+  {
+    checked: true,
+    checkBoxLabel: "ShotMap"
   }
-}));
+];
+
 function App() {
-  const classes = useStyles();
+  const [option, setOption] = React.useState(checkBoxOption);
+  function handleFilter(updatedOption) {
+    console.log(updatedOption);
+    setOption(updatedOption);
+  }
   return (
-    <div className={classes.root}>
-      <AppBar />
-      <Toolbar>
-        <IconButton
-          edge="start"
-          className={classes.menuButton}
-          color="inherit"
-          aria-label="menu"
-        >
-          <MenuIcon />
-        </IconButton>
-        <Typography variant="h6" className={classes.title}>
-          News
-        </Typography>
-        <Button color="inherit">Login</Button>
-      </Toolbar>
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          {" "}
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
+    <div>
+      <Header />
+      <ShotMapSectionHeader
+        checkBoxOption={option}
+        optionSelected={handleFilter}
+      />
+      <ShotMapGridContainer gridEnable={option} />
     </div>
   );
 }
