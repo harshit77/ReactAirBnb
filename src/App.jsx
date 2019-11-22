@@ -3,6 +3,7 @@ import React from "react";
 import Header from "./Components/Header";
 import ShotMapSectionHeader from "./Components/ShotMapSectionHeader";
 import ShotMapGridContainer from "./Components/ShotMapGridContainer";
+import UserRoles from "./Components/UserRoles";
 
 const checkBoxOption = [
   {
@@ -28,6 +29,7 @@ function App() {
   return (
     <div>
       <Header />
+      <UserRoles />
       <ShotMapSectionHeader
         checkBoxOption={option}
         optionSelected={handleFilter}
